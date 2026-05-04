@@ -55,9 +55,15 @@ export default function RootLayout({
 			>
 			{children}
 			{/* Chatbot REYES — Cleo */}
-			<Script
-				src="https://creafix-chatbot-platform.vercel.app/embed.js?botId=clarissa-v1-copy-1777483734221"
-				strategy="afterInteractive"
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `(function() {
+						var s = document.createElement('script');
+						s.src = 'https://creafix-chatbot-platform.vercel.app/embed.js?botId=clarissa-v1-copy-1777483734221';
+						s.async = true;
+						document.head.appendChild(s);
+					})();`,
+				}}
 			/>
 			{/* Fin Chatbot REYES — Cleo */}
 			</body>
