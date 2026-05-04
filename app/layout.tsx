@@ -53,11 +53,13 @@ export default function RootLayout({
 			<body
 				className={`${geistMono.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}
 			>
-				{children}
-				<Script
-					src="https://creafix-chatbot-platform.vercel.app/embed.js?botId=clarissa-v1-copy-1777483734221"
-					strategy="afterInteractive"
-				/>
+			{children}
+			{/* Chatbot REYES — Cleo */}
+			<Script
+				src="https://creafix-chatbot-platform.vercel.app/embed.js?botId=clarissa-v1-copy-1777483734221"
+				strategy="afterInteractive"
+			/>
+			{/* Fin Chatbot REYES — Cleo */}
 			</body>
 		</html>
 	);
