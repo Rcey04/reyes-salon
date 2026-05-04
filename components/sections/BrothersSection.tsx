@@ -88,13 +88,13 @@ export default function BrothersSection({ lang }: BrothersSectionProps) {
 								className="relative overflow-hidden aspect-[3/4] bg-foreground/5 img-grain group"
 								data-cursor="VOIR"
 							>
-								<Image
-									src={brother.image}
-									alt={`Portrait de ${brother.name}`}
-									fill
-									className="object-cover grayscale contrast-[1.15] brightness-[0.88] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-									sizes="(max-width: 768px) 100vw, 50vw"
-								/>
+							<ImageWithFallback
+								src={brother.image}
+								alt={`Portrait de ${brother.name}`}
+								fill
+								className="object-cover grayscale contrast-[1.15] brightness-[0.88] transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+								sizes="(max-width: 768px) 100vw, 50vw"
+							/>
 								{/* Vignette */}
 								<div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 pointer-events-none" />
 							</div>
