@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist_Mono, Instrument_Serif } from 'next/font/google';
-import Script from 'next/script';
+import ChatbotWidget from '@/components/ChatbotWidget';
 import './globals.css';
 
 const geistMono = Geist_Mono({
@@ -54,18 +54,7 @@ export default function RootLayout({
 				className={`${geistMono.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground`}
 			>
 			{children}
-			{/* Chatbot REYES — Cleo */}
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `(function() {
-						var s = document.createElement('script');
-						s.src = 'https://creafix-chatbot-platform.vercel.app/embed.js?botId=clarissa-v1-copy-1777483734221';
-						s.async = true;
-						document.head.appendChild(s);
-					})();`,
-				}}
-			/>
-			{/* Fin Chatbot REYES — Cleo */}
+			<ChatbotWidget />
 			</body>
 		</html>
 	);
